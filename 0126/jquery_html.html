@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      function inner() {
+        document.getElementById('aa').innerHTML = '호호<b>하하하</b>';
+      }
+
+      $(function () {
+        $('#btn').click(function () {
+          $('#bb').html('히히<b>웅웅웅</b>킹킹');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" value="id aa 태그 넣기" onclick="inner()" />
+    <input type="button" value="id bb 태그 넣기" id="btn" />
+    <hr />
+    <div id="aa"></div>
+    <hr />
+    <div id="bb"></div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(function () {
+        $('#btn').click(function () {
+          $('#aa').removeAttr('value');
+          $('#cc').removeAttr('type'); //input 태그는 타입이 없으면 text로 변경
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" value="속성지우기" id="btn" />
+    <input type="text" value="안녕하세요" id="aa" />
+    <input type="checkbox" value="안녕하세요" id="cc" />
+  </body>
+</html>

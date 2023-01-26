@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      function inner() {
+        document.getElementById('aa').innerText = '목요일';
+      }
+      $(function () {
+        $('#btn').click(function () {
+          $('#bb').text('금요일');
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <input type="button" value="id에 aa 글자 넣기" onclick="inner()" />
+    <input type="button" value="id에 bb 글자 넣기" id="btn" />
+    <hr />
+    <div id="aa"></div>
+    <hr />
+    <div id="bb"></div>
+  </body>
+</html>

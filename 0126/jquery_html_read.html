@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      function inner() {
+        alert(document.getElementById('aa').innerHTML);
+      }
+
+      $(function () {
+        $('#btn').click(function () {
+          alert($('#bb').html());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" value="id aa 태그 가져오기" onclick="inner()" />
+    <input type="button" value="id bb 태그 가져오기" id="btn" />
+    <hr />
+    <div id="aa">
+      <b>하하하</b>
+    </div>
+    <hr />
+    <div id="bb">
+      <b>호호호</b>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        color: black;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      function chg() {
+        alert(document.getElementById('aa').style.color);
+        document.getElementById('aa').style.color = 'red';
+      }
+
+      $(function () {
+        $('#bb').mouseover(function () {
+          alert($('#bb').css('color'));
+          $('#bb').css('color', 'blue');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="aa" onmouseover="chg()">오늘은 즐거은 목요일</div>
+    <div id="bb">내일은 더 즐거은 금요일</div>
+  </body>
+</html>

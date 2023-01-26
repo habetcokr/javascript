@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      function chg() {
+        var bb = document.getElementById('bb'); //
+        var n = bb.src; //http://~~~~/5.jpg
+        var name = n.lastIndexOf('/'); // 37
+        var haha = bb.src.substring(name + 1); // 5.jpg
+        if (haha == '5.jpg') bb.src = '7.jpg';
+        else bb.src = '5.jpg';
+      }
+
+      $(function () {
+        $('#aa').click(function () {
+          if ($('#aa').attr('src') == '5.jpg') $('#aa').attr('src', '7.jpg');
+          else $('#aa').attr('src', '5.jpg');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img id="aa" src="5.jpg" width="200" />
+    <img id="bb" src="5.jpg" width="200" onclick="chg()" />
+  </body>
+</html>
