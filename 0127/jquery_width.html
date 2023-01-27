@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #aa {
+        width: 300px;
+        height: 200px;
+        padding: 10px;
+        margin: 7px;
+        border: 6px solid red;
+        background-color: yellow;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(function () {
+        //가로 세로 크기를 지정하거나 값을 읽어오는 메소드
+        //width(), height(), innerWidth(), innerHeight(), outerWidth(), outerHeight();
+        $('#btn').click(function () {
+          $('#w1').text($('#aa').width());
+          $('#h1').text($('#aa').height());
+          $('#w2').text($('#aa').innerWidth());
+          $('#h2').text($('#aa').innerHeight());
+          $('#w3').text($('#aa').outerWidth());
+          $('#h3').text($('#aa').outerHeight());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" id="btn" value="가로 세로 값 확인" />
+
+    <div id="aa">
+      width() : <span id="w1"></span><br />
+      height() : <span id="h1"></span><br />
+      innerWidth() : <span id="w2"></span><br />
+      innerHeight() : <span id="h2"></span><br />
+      outerWidth() : <span id="w3"></span><br />
+      outerHeight() : <span id="h3"></span><br />
+    </div>
+  </body>
+</html>

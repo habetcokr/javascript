@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .test {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        color: yellow;
+        background: black;
+        font-size: 20px;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(function () {
+        // id="btn"인 버튼이 클릭되면 스타일 속성( width,height,border,color)
+        $('#btn').click(function () {
+          $('#aa').css('width', '200px');
+          $('#aa').css('height', '40px');
+          $('#aa').css('border', '1px solid red');
+          $('#aa').css('color', 'red');
+        });
+
+        //addClass()
+        $('#btn2').click(function () {
+          $('#bb').addClass('test');
+        });
+
+        //removeClass()
+        $('#btn3').click(function () {
+          $('#bb').removeClass('test');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" id="btn" value="속성주기" />
+    <hr />
+    <div id="aa">감사합니다.</div>
+
+    <input type="button" id="btn2" value="addclass속성주기" />
+    <input type="button" id="btn3" value="addclass속성지우기" />
+    <hr />
+    <div id="bb">감사합니다.</div>
+  </body>
+</html>

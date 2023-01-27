@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(function () {
+        $('#btn').click(function () {
+          var k = parseInt($('#kor').val());
+          var e = parseInt($('#eng').val());
+          //alert(k + e);
+          //alert($('#name').val().length);
+          var result = k + e;
+          var n = $('#name').val();
+
+          $('#name2').val(n);
+          $('#hap').val(result);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      국어<input type="text" name="kor" id="kor" /><br />
+      영어<input type="text" name="eng" id="eng" /><br />
+      이름<input type="text" name="name" id="name" /><br />
+      <input type="button" id="btn" value="클릭" />
+    </form>
+
+    <hr />
+    <form>
+      이름<input type="text" id="name2" /> 합<input type="text" id="hap" />
+    </form>
+  </body>
+</html>
